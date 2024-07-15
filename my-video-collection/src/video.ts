@@ -1,9 +1,7 @@
-// video.ts
 export const videos = [
   {
-      src: "/videos/Almesus2024.mp4", 
-      title: "Din Første Video",
-      comment: "Beskrivelse av din første video."
-  },
-
+    src: 'https://storage.cloud.google.com/almesus2024/Almesus2024.mp4',
+    title: 'Almesus 2024',
+    comment: ''
+  }
 ];
