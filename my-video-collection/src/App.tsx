@@ -1,18 +1,12 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Container,
-  VStack,
-  useColorModeValue,
-  Flex,
-} from "@chakra-ui/react";
+import { Container, VStack, useColorModeValue, Flex } from "@chakra-ui/react";
 import VideoPlayer from "./components/VideoPlayer";
 import { videos } from "./video";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 
 const App: React.FC = () => {
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [currentVideoIndex] = useState(0);
 
   const bgGradient = useColorModeValue(
     "linear(to-r, green.100, yellow.100)", // Juster disse fargene til grønn og gul
