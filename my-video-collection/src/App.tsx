@@ -42,9 +42,18 @@ const App: React.FC = () => {
           />
         </Flex>
         <VStack spacing={4} w="100%">
-          {videos.map((video, index) => (
-            <VideoPlayer key={index} src={video.src} title={video.title} />
-          ))}
+          {videos.map((video, index) => {
+            const videoProps =
+              video.title === "Almesus 2024 versjon 1"
+                ? {
+                    key: index,
+                    src: video.src,
+                    title: video.title,
+                    comment: "Kun siste 1,5-2min som er endret",
+                  }
+                : { key: index, src: video.src, title: video.title };
+            return <VideoPlayer {...videoProps} />;
+          })}
         </VStack>
       </Container>
     </Box>

@@ -11,6 +11,10 @@ export const videos = [
   },
   {
     src: 'https://drive.google.com/file/d/1h8vwoeHRobPkaa1FWHUanK2w-EupkZ9N/view?usp=sharing',
-    title: 'Almesus 2024'
+    title: 'Almesus 2024 versjon 1'
+  },
+  {
+    src: 'https://drive.google.com/file/d/1Fp1jw4PcYt1mQPMMW4kIJ7tKZ6xauTxB/view?usp=drive_link',
+    title: 'Almesus 2024 versjon 2'
   }
 ];
