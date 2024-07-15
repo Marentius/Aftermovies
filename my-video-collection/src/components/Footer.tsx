@@ -4,10 +4,7 @@ const Footer = () => {
   return (
     <Box as="footer" bg="black" color="white" py={4}>
       <Container maxW="container.md" centerContent>
-        <Text>
-          © {new Date().getFullYear()} Ditt Firmanavn - Alle rettigheter
-          reservert.
-        </Text>
+        <Text>© {new Date().getFullYear()} VÆRME</Text>
       </Container>
     </Box>
   );
