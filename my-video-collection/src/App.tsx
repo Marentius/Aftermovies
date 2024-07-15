@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, VStack, useColorModeValue, Flex } from "@chakra-ui/react";
+import { VStack, useColorModeValue, Flex } from "@chakra-ui/react";
 import VideoPlayer from "./components/VideoPlayer";
 import { videos } from "./video";
 import NavBar from "./components/NavBar";
