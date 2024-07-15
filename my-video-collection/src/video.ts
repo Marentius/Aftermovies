@@ -1,20 +1,9 @@
-// src/videos.ts
-
+// video.ts
 export const videos = [
   {
-    src: 'https://drive.google.com/file/d/1WLEJjLf32Cg5nBekTLENIbxg1OqNC6JV/view?usp=drive_link',
-    title: 'Julebord 2019'
+      src: "/videos/Almesus2024.mp4", // Endre til den faktiske banen til din video
+      title: "Din Første Video",
+      comment: "Beskrivelse av din første video."
   },
-  {
-    src: 'https://drive.google.com/file/d/1003zR-Vr0nEYR80HyugGVIWnD2c_frSO/view?usp=sharing',
-    title: 'Julebord 2022'
-  },
-  {
-    src: 'https://drive.google.com/file/d/1h8vwoeHRobPkaa1FWHUanK2w-EupkZ9N/view?usp=sharing',
-    title: 'Almesus 2024 versjon 1'
-  },
-  {
-    src: 'https://drive.google.com/file/d/1Fp1jw4PcYt1mQPMMW4kIJ7tKZ6xauTxB/view?usp=drive_link',
-    title: 'Almesus 2024 versjon 2'
-  }
+  // Du kan legge til flere videoer her
 ];

@@ -1,48 +1,28 @@
 import React from "react";
-import { Box, Text, Button, useColorModeValue } from "@chakra-ui/react";
+import { Box, useColorModeValue } from "@chakra-ui/react";
 
 interface VideoPlayerProps {
   src: string;
-  title: string;
 }
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, title }) => {
-  const bgColor = useColorModeValue("gray.200", "gray.700");
-  const textColor = useColorModeValue("black", "gray.300");
+const VideoPlayer: React.FC<VideoPlayerProps> = ({ src }) => {
+  const bgColor = useColorModeValue("gray.800", "gray.900");
 
   return (
     <Box
-      maxW="800px"
-      borderWidth="1px"
+      borderWidth="0px"
       borderRadius="lg"
       overflow="hidden"
       mb={4}
       mx="auto"
       bg={bgColor}
-      color="white"
-      p={4}
+      p={0}
+      boxShadow="xl"
     >
-      <Box p="6">
-        <Text
-          fontSize="lg"
-          fontWeight="bold"
-          color={textColor}
-          textAlign="center"
-          mb={4}
-        >
-          {title}
-        </Text>
-        <Button
-          as="a"
-          href={src}
-          target="_blank"
-          rel="noopener noreferrer"
-          colorScheme="blue"
-          w="100%"
-        >
-          Klikk for å se videon❤️
-        </Button>
-      </Box>
+      <video width="100%" controls style={{ display: "block", height: "auto" }}>
+        <source src={src} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </Box>
   );
 };
