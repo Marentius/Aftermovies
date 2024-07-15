@@ -16,14 +16,14 @@ const App: React.FC = () => {
   return (
     <Flex direction="column" minH="100vh" bgGradient={bgGradient}>
       <NavBar />
-      <Container as="main" maxW="container.md" flexGrow={1} p={8}>
+      <Flex flexGrow={1} justifyContent="center" alignItems="center" p={8}>
         <VStack spacing={4}>
           <VideoPlayer
             src={videos[currentVideoIndex].src}
             comment={videos[currentVideoIndex].comment}
           />
         </VStack>
-      </Container>
+      </Flex>
       <Footer />
     </Flex>
   );
