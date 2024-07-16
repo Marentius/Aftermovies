@@ -1,24 +1,16 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import { ChakraProvider, extendTheme, ColorModeScript } from "@chakra-ui/react";
+import ReactDOM from "react-dom";
+import { ChakraProvider } from "@chakra-ui/react";
 import App from "./App";
-import "./index.css";
+import theme from "./theme"; // Importer det tilpassede temaet
 
-const config = {
-  initialColorMode: "dark",
-  useSystemColorMode: false,
-};
-
-const theme = extendTheme({ config });
-
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
-      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      {" "}
+      {/* Bruk det tilpassede temaet */}
       <App />
     </ChakraProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
