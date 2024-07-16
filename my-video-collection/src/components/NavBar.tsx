@@ -36,9 +36,13 @@ const NavBar = () => {
       as="nav"
       align="center"
       wrap="wrap"
-      padding="1.5rem"
+      padding="1rem"
       bg="pink.300"
       justify="space-between"
+      position="fixed"
+      top="0"
+      width="100%"
+      zIndex="1000"
     >
       <Flex align="center">
         <Box display={displayHamburgerMenu} mr={2}>
@@ -127,16 +131,16 @@ const NavBar = () => {
       <Box flex="1" textAlign="center">
         <Flex justify="center">
           <Image
-            src="/logo/almesus_enhanced.png"
+            src="/logo/almesus.png"
             alt="Logo"
-            boxSize="100px"
+            boxSize="60px" // Reduser størrelsen på logoen hvis nødvendig
             filter="brightness(0) invert(1)"
             width="auto"
             mx="auto"
           />
         </Flex>
       </Box>
-      <Box width="100px" display={{ base: "none", md: "block" }} />{" "}
+      <Box width="50px" display={{ base: "none", md: "block" }} />{" "}
       {/* Dette holder plassen på høyre side på desktop */}
     </Flex>
   );

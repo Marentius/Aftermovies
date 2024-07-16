@@ -15,14 +15,20 @@ const App: React.FC = () => {
   return (
     <Flex direction="column" minH="100vh" bgGradient={bgGradient} id="top">
       <NavBar />
-      <Flex flexGrow={1} justifyContent="center" alignItems="center" p={8}>
+      <Flex
+        flexGrow={1}
+        justifyContent="center"
+        alignItems="center"
+        p={8}
+        mt="70px"
+      >
         <VStack spacing={4}>
           {videos.map((video, index) => (
             <VideoPlayer
               key={index}
               src={video.src}
               comment={video.comment}
-              placeholder={video.placeholder}
+              placeholder={video.placeholder} // Pass placeholder prop
             />
           ))}
         </VStack>
