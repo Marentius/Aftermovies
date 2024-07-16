@@ -127,7 +127,7 @@ const NavBar = () => {
       <Box flex="1" textAlign="center">
         <Flex justify="center">
           <Image
-            src="/logo/almesus.png"
+            src="/logo/almesus_enhanced.png"
             alt="Logo"
             boxSize="100px"
             filter="brightness(0) invert(1)"
