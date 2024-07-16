@@ -18,6 +18,7 @@ const NavBar = () => {
     md: "none",
   });
   const displayLink = useBreakpointValue({ base: "none", md: "block" });
+  const isDesktop = useBreakpointValue({ base: false, md: true });
 
   const handleSmoothScroll = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
@@ -58,8 +59,12 @@ const NavBar = () => {
                 href="#bildebank"
                 bg="pink.300"
                 color="white"
-                _hover={{ bg: "pink.400", textDecoration: "none" }}
-                _focus={{ bg: "pink.500" }}
+                _hover={
+                  isDesktop
+                    ? { bg: "pink.400", textDecoration: "none" }
+                    : { bg: "pink.300" }
+                }
+                _focus={isDesktop ? { bg: "pink.500" } : { bg: "pink.300" }}
                 onClick={(e) => {
                   e.preventDefault();
                   const target = document.getElementById("bildebank");
@@ -75,8 +80,12 @@ const NavBar = () => {
                 href="#footer"
                 bg="pink.300"
                 color="white"
-                _hover={{ bg: "pink.400", textDecoration: "none" }}
-                _focus={{ bg: "pink.500" }}
+                _hover={
+                  isDesktop
+                    ? { bg: "pink.400", textDecoration: "none" }
+                    : { bg: "pink.300" }
+                }
+                _focus={isDesktop ? { bg: "pink.500" } : { bg: "pink.300" }}
                 onClick={(e) => {
                   e.preventDefault();
                   const target = document.getElementById("footer");
