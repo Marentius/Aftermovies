@@ -1,5 +1,5 @@
 import React from "react";
-import { VStack, useColorModeValue, Flex } from "@chakra-ui/react";
+import { Container, VStack, useColorModeValue, Flex } from "@chakra-ui/react";
 import VideoPlayer from "./components/VideoPlayer";
 import { videos } from "./video";
 import NavBar from "./components/NavBar";
@@ -18,7 +18,12 @@ const App: React.FC = () => {
       <Flex flexGrow={1} justifyContent="center" alignItems="center" p={8}>
         <VStack spacing={4}>
           {videos.map((video, index) => (
-            <VideoPlayer key={index} src={video.src} />
+            <VideoPlayer
+              key={index}
+              src={video.src}
+              comment={video.comment}
+              placeholder={video.placeholder}
+            />
           ))}
         </VStack>
       </Flex>
