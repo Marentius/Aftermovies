@@ -19,8 +19,15 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, comment }) => {
       bg={bgColor}
       p={0}
       boxShadow="xl"
+      width="100%"
+      maxWidth="800px"
     >
-      <video width="100%" controls style={{ display: "block", height: "auto" }}>
+      <video
+        width="100%"
+        controls
+        style={{ display: "block", height: "auto" }}
+        preload="metadata"
+      >
         <source src={src} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
